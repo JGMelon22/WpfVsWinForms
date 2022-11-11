@@ -1,6 +1,7 @@
 ﻿using WpfEg.Repository;
 using System.Diagnostics;
 using System.Windows;
+using System;
 
 namespace SinistrosListarWpfDemo
 {
@@ -40,10 +41,12 @@ namespace SinistrosListarWpfDemo
 
             stopWatch.Stop();
 
-            lblAvgTime.Content = "Average Time";
+            TimeSpan ts = stopWatch.Elapsed;
 
-            txtBoxAvgTime.Text = stopWatch.ElapsedMilliseconds.ToString();
-            txtBoxAvgTime.Visibility =
+            lblAvgTime.Content = "Average Time\nin seconds";
+            var avgElaspedTime = Math.Round(ts.TotalSeconds, 2).ToString();
+
+            txtBoxAvgTime.Text = avgElaspedTime;
             txtBoxAvgTime.Visibility = Visibility.Visible;
             stopWatch.Reset();
 
@@ -52,7 +55,7 @@ namespace SinistrosListarWpfDemo
 
         private void lstUsers_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
-            lblAmount.Content = $"Qtd Selecionada:\n{lstUsers.SelectedItems.Count.ToString()}";
+            lblAmount.Content = $"Selected Amount:\n{lstUsers.SelectedItems.Count.ToString()}";
         }
     }
 }

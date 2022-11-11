@@ -10,9 +10,9 @@
     <Grid Background="DimGray" Margin="0,0,0,0">
         <ListBox x:Name="lstUsers" HorizontalAlignment="Left" Height="381" Margin="24,24,0,0" VerticalAlignment="Top" Width="649" SelectionMode="Extended"  d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="lstUsers_SelectionChanged"/>
         <Button Name="btnClear" Content="Clear" FontSize="17" HorizontalAlignment="Left" Height="33" Margin="680,69,0,0" VerticalAlignment="Top" Width="100" Click="btnClear_Click"/>
-        <Label Name="lblAvgTime" Content="Average Time" FontSize="14.5" HorizontalAlignment="Left" Height="30" Margin="680,117,0,0" VerticalAlignment="Top" Width="100"/>
-        <TextBox Name="txtBoxAvgTime" IsEnabled="false" FontSize="15" HorizontalAlignment="Left" Height="35" Margin="680,152,0,0" VerticalAlignment="Top" Width="100"></TextBox>
-        <Label Name="lblAmount" Content="label2" FontSize="14.5" HorizontalAlignment="Left" Height="75" Margin="680,200,0,0" VerticalAlignment="Top" Width="110"/>
+        <Label Name="lblAvgTime" Content="Average Time" FontSize="14" HorizontalAlignment="Left" Height="50" Margin="680,117,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox Name="txtBoxAvgTime" IsEnabled="false" FontSize="15" HorizontalAlignment="Left" Height="35" Margin="680,170,0,0" VerticalAlignment="Top" Width="100"></TextBox>
+        <Label Name="lblAmount" Content="label2" FontSize="11.5" HorizontalAlignment="Left" Height="75" Margin="680,230,0,0" VerticalAlignment="Top" Width="110"/>
         <Button x:Name="btnLoad" Content="Load" FontSize="17" HorizontalAlignment="Left" Height="33" Margin="678,24,0,0" VerticalAlignment="Top" Width="100" Click="btnLoad_Click"/>
     </Grid>
 </Window>
